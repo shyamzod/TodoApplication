@@ -24,6 +24,10 @@ function TodoComponent() {
   };
 
   const handleAddTodo = async () => {
+    if (TodoText === "" || TodoDesc === "") {
+      toast("Item and Description cannot be empty..");
+      return;
+    }
     const obj = { TodoText, TodoDesc };
     const data = await fetch("http://localhost:3000/AddTodo", {
       method: "POST",

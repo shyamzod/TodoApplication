@@ -17,7 +17,7 @@ function SignUpComponent() {
   }
 
   function login() {
-    navigate("/login");
+    navigate("/");
   }
 
   async function signUp() {
